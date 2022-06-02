@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html>
+<head >
+  <meta charset="utf-8">
+  
+  <title>STL容器系列之multiset，multimap和deque容器的使用(拓展) | 广雅中学花都校区信息竞赛 | 广东广雅中学花都校区信息竞赛官方博客</title>
+
+  
+  <meta name="author" content="广雅中学花都校区信息竞赛">
+  
+
+  
+  <meta name="description" content="Happily Coding, Terrifying Debugging!">
+  
+
+  
+  
+  <meta name="keywords" content="STL,STL容器,multimap,multiset,deque">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="STL容器系列之multiset，multimap和deque容器的使用(拓展)"/>
+
+  <meta property="og:site_name" content="广雅中学花都校区信息竞赛"/>
+
+  
+  <meta property="og:image" content="/GuangYaHuaduTeam.github.io/favicon.ico"/>
+  
+  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5005349780815724",
+    enable_page_level_ads: true
+  });
+</script>
+
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?223eea22355699157e147870eb124b24";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+  <link rel="manifest" href="/manifest.json">
+  <link href="/GuangYaHuaduTeam.github.io/favicon.ico" rel="icon">
+
+  <link rel="alternate" href="/GuangYaHuaduTeam.github.io/atom.xml" title="广雅中学花都校区信息竞赛" type="application/atom+xml">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/GuangYaHuaduTeam.github.io/css/base/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/GuangYaHuaduTeam.github.io/css/style.css" media="screen" type="text/css">
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    
+
+    <header class="header-container" style="background-image: url('/images/blog-bg.jpg');">
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header page-scroll">
+          <button type="button" id="tglBtn" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">广雅中学花都校区信息竞赛</a>
+        </div>
+        <div id="bosenyblog-navbar">
+          <div class="navbar-collapse" id="bs-example-navbar-collapse-6">
+            <ul class="nav navbar-nav navbar-right">
+            
+              <li><a href="/GuangYaHuaduTeam.github.io/">主页</a></li>
+            
+              <li><a href="/GuangYaHuaduTeam.github.io/archives">归档</a></li>
+            
+              <li><a href="/GuangYaHuaduTeam.github.io/about">关于</a></li>
+            
+              <li><a href="/GuangYaHuaduTeam.github.io/tags">标签</a></li>
+            
+            </ul>
+          </div>
+        </div>
+
+    </div>
+ </nav>
+ <div class="gotop-btn">
+
+ </div>
+</header>
+
+        
+          <div class="container ">
+          <div class="row">
+            <main class="site-main posts-loop col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container" style="position: inherit;">
+            <article class="article-container ">
+
+  
+    
+    <h3 class="article-title"><span>STL容器系列之multiset，multimap和deque容器的使用(拓展)</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/GuangYaHuaduTeam.github.io/2022/06/02/0005-STL容器系列之multiset和multimap容器的使用/" rel="bookmark">
+        <time class="entry-date published" datetime="2022-06-02T10:20:49.853Z">
+          2022-06-02
+        </time>
+      </a>
+    </span>
+    <br />
+    
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+    
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+          <h2 id="广雅花都信息竞赛周刊第5期"><a href="#广雅花都信息竞赛周刊第5期" class="headerlink" title="广雅花都信息竞赛周刊第5期"></a>广雅花都信息竞赛周刊第5期</h2><h3 id="0-简介"><a href="#0-简介" class="headerlink" title="0.简介"></a>0.简介</h3><h3 id="1-初始化方式"><a href="#1-初始化方式" class="headerlink" title="1.初始化方式"></a>1.初始化方式</h3><h3 id="2-常用成员函数"><a href="#2-常用成员函数" class="headerlink" title="2.常用成员函数"></a>2.常用成员函数</h3><h3 id="3-应用和相关例题"><a href="#3-应用和相关例题" class="headerlink" title="3.应用和相关例题"></a>3.应用和相关例题</h3>
+      
+    </div>
+    
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/GuangYaHuaduTeam.github.io/categories/周刊/">周刊</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/GuangYaHuaduTeam.github.io/tags/STL/">STL</a><a href="/GuangYaHuaduTeam.github.io/tags/STL容器/">STL容器</a><a href="/GuangYaHuaduTeam.github.io/tags/multimap/">multimap</a><a href="/GuangYaHuaduTeam.github.io/tags/multiset/">multiset</a><a href="/GuangYaHuaduTeam.github.io/tags/deque/">deque</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+  
+    
+    
+  
+</article>
+   
+    <div id="toc" class="toc-article ">
+    <div class="toc-title">目录</div>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BF%E9%9B%85%E8%8A%B1%E9%83%BD%E4%BF%A1%E6%81%AF%E7%AB%9E%E8%B5%9B%E5%91%A8%E5%88%8A%E7%AC%AC5%E6%9C%9F"><span class="toc-number">1.</span> <span class="toc-text">广雅花都信息竞赛周刊第5期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">0.简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">1.初始化方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%B8%B8%E7%94%A8%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text">2.常用成员函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%BA%94%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E4%BE%8B%E9%A2%98"><span class="toc-number">1.4.</span> <span class="toc-text">3.应用和相关例题</span></a></li></ol></li></ol>
+</div>
+
+
+  
+
+	<!-- async load  -->
+	<script>
+			function async(u, c) {
+				var d = document, t = 'script',
+						o = d.createElement(t),
+						s = d.getElementsByTagName(t)[0];
+				o.src = u;
+				if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+				s.parentNode.insertBefore(o, s);
+			}
+	</script>
+	<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+	<script>
+			async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+					anchors.options = {
+						visible: 'hover',
+						placement: 'left',
+						// icon: '#'
+					};
+					anchors.add().remove('.article-title').remove('.subheading').remove('.sidebar-container h5');
+			})
+	</script>
+	<style>
+			/* place left on bigger screen */
+			@media all and (min-width: 800px) {
+					.anchorjs-link{
+							position: absolute;
+							left: -0.75em;
+							font-size: 1.1em;
+							margin-top : -0.1em;
+					}
+			}
+	</style>
+
+
+
+
+<!-- UY BEGIN -->
+	<div id="gitment-container"></div>
+	<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+	<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+	<script src="/GuangYaHuaduTeam.github.io/js/web-pinyin.js"></script>
+	<script>
+		function toUnicode(s){ 
+			return s.replace(/([\u4E00-\u9FA5]|[\uFE30-\uFFA0])/g,function(){
+			return "\\u" + RegExp["$1"].charCodeAt(0).toString(16);
+			});
+		}
+		var title = 'STL容器系列之multiset，multimap和deque容器的使用(拓展)'
+		var GitHub_id = 'GuangYaHuaduOITeam'
+		var client_id = '5af7be5a07d59951473f'
+		var client_secret = '48dbae972ac66d4ee7f8d2f8e9e0d9498b028403'
+		var repo = 'https://github.com/GuangYaHuaduOITeam/GuangYaHuaduTeam.github.io'
+		var gitment = new Gitment({
+		// id: '页面 ID', // 可选。默认为 location.href
+		// id:"11" ,
+		id: title,
+		title: title,
+		owner: GitHub_id,//'你的 GitHub ID',
+		repo: repo,//'存储评论的 repo',
+		oauth: {
+			client_id: client_id,//'你的 client ID',
+			client_secret: client_secret,//'你的 client secret',
+		},
+		})
+		gitment.render('gitment-container')
+	</script>
+<!-- UY END -->
+
+
+
+
+            </main>
+          </div>
+        </div>
+       
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/BosenY/Lap" target="_blank">Lap</a>
+    <br/><span id="busuanzi_container_site_uv"> 
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+    </br>
+    
+      
+        &copy; 2022 广雅中学花都校区信息竞赛
+      
+    
+  </p>
+</footer>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-92842840-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+  </div>
+
+</div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/draw-something/dist/draw.min.js"></script>
+  <script>
+    let maxNum = Number.parseInt('10')
+    let iconText = 'C++'
+    let color = 'grey'
+    new Draw({maxNum, iconText, color})
+  </script>
+
+<script src="/GuangYaHuaduTeam.github.io/js/index.js"></script>
+<script src="/GuangYaHuaduTeam.github.io/js/search.js"></script>
+
+</body>
+</html>

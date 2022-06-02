@@ -1,0 +1,633 @@
+<!DOCTYPE HTML>
+<html>
+<head >
+  <meta charset="utf-8">
+  
+  <title>广雅中学花都校区信息竞赛 | 广东广雅中学花都校区信息竞赛官方博客</title>
+
+  
+  <meta name="author" content="广雅中学花都校区信息竞赛">
+  
+
+  
+  <meta name="description" content="Happily Coding, Terrifying Debugging!">
+  
+
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  
+
+  <meta property="og:site_name" content="广雅中学花都校区信息竞赛"/>
+
+  
+  <meta property="og:image" content="/GuangYaHuaduTeam.github.io/favicon.ico"/>
+  
+  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5005349780815724",
+    enable_page_level_ads: true
+  });
+</script>
+
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?223eea22355699157e147870eb124b24";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+  <link rel="manifest" href="/manifest.json">
+  <link href="/GuangYaHuaduTeam.github.io/favicon.ico" rel="icon">
+
+  <link rel="alternate" href="/GuangYaHuaduTeam.github.io/atom.xml" title="广雅中学花都校区信息竞赛" type="application/atom+xml">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/GuangYaHuaduTeam.github.io/css/base/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/GuangYaHuaduTeam.github.io/css/style.css" media="screen" type="text/css">
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    
+
+    <header class="header-container" style="background-image: url('/images/blog-bg.jpg');">
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header page-scroll">
+          <button type="button" id="tglBtn" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">广雅中学花都校区信息竞赛</a>
+        </div>
+        <div id="bosenyblog-navbar">
+          <div class="navbar-collapse" id="bs-example-navbar-collapse-6">
+            <ul class="nav navbar-nav navbar-right">
+            
+              <li><a href="/GuangYaHuaduTeam.github.io/">主页</a></li>
+            
+              <li><a href="/GuangYaHuaduTeam.github.io/archives">归档</a></li>
+            
+              <li><a href="/GuangYaHuaduTeam.github.io/about">关于</a></li>
+            
+              <li><a href="/GuangYaHuaduTeam.github.io/tags">标签</a></li>
+            
+            </ul>
+          </div>
+        </div>
+
+    </div>
+ </nav>
+ <div class="gotop-btn">
+
+ </div>
+</header>
+
+        
+        <div class="container ">
+          <div class="row">
+            <main class="site-main posts-loop    col-lg-8 col-lg-offset-1
+                    col-md-8 col-md-offset-1
+                    col-sm-12
+                    col-xs-12">
+            
+  <article class="article-container ">
+
+  
+    
+    <h3 class="article-title"><a href="/GuangYaHuaduTeam.github.io/2022/06/02/如何提高C++中cout的输出效率/"><span>如何提高C++中cout的输出效率</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/GuangYaHuaduTeam.github.io/2022/06/02/如何提高C++中cout的输出效率/" rel="bookmark">
+        <time class="entry-date published" datetime="2022-06-02T10:20:49.869Z">
+          2022-06-02
+        </time>
+      </a>
+    </span>
+    <br />
+    
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+          <h2 id="广雅花都信息竞赛周刊第1期-附刊"><a href="#广雅花都信息竞赛周刊第1期-附刊" class="headerlink" title="广雅花都信息竞赛周刊第1期-附刊"></a>广雅花都信息竞赛周刊第1期-附刊</h2><h3 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h3><p>    在C++中添加了<code>cout</code>这种输出方式，在易用性和安全性上大大超越了C语言对应的<code>printf</code>函数。但是这也带来了一定的代价：<code>cout</code>的输出效率远低于<code>printf</code>。在一些输出相当大量的题中，这一速度问题有可能导致TLE点的出现；在这种情况下我们一般只能选择使用更快的<code>printf</code>进行输出，这就又导致了一个问题的出现：使用<code>printf</code>进行输出有可能会导致各种疑难杂症。那么如何在这种情况下使用<code>cout</code>来进行高效率的输出？</p>
+<h3 id="1-使用”-n”或’-n’而非endl进行换行"><a href="#1-使用”-n”或’-n’而非endl进行换行" class="headerlink" title="1.使用”\n”或’\n’而非endl进行换行"></a>1.使用”\n”或’\n’而非endl进行换行</h3><h3 id="2-ios-sync-with-stdio-函数"><a href="#2-ios-sync-with-stdio-函数" class="headerlink" title="2.ios::sync_with_stdio()函数"></a>2.ios::sync_with_stdio()函数</h3><p>    使用方式:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>     在C++中，由于printf和cout在输出是都要操作输出缓冲区，故为了避免同时使用两者输出是出现的同时读写缓存内容导致输出顺序等的错乱，cout在实现时特意与printf保持同步以规避此问题；但是这一解决方案导致了cout的效率的大幅下滑，故使用ios::sync_with_stdio(false)函数关闭这一同步后，cout的输出效率得以大幅提升。</p>
+
+      
+    </div>
+    
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/GuangYaHuaduTeam.github.io/categories/周刊/">周刊</a>, <a href="/GuangYaHuaduTeam.github.io/categories/周刊/附刊/">附刊</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/GuangYaHuaduTeam.github.io/tags/小技巧/">小技巧</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+  
+    
+    <h3 class="article-read"><a href="/GuangYaHuaduTeam.github.io/2022/06/02/如何提高C++中cout的输出效率/"><span>点击阅读</span></a></h3>
+    
+  
+</article>
+
+
+
+
+
+  <article class="article-container ">
+
+  
+    
+    <h3 class="article-title"><a href="/GuangYaHuaduTeam.github.io/2022/06/02/0003-STL容器系列之map和set容器的使用/"><span>STL容器系列之map和set容器的使用</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/GuangYaHuaduTeam.github.io/2022/06/02/0003-STL容器系列之map和set容器的使用/" rel="bookmark">
+        <time class="entry-date published" datetime="2022-06-02T10:20:49.853Z">
+          2022-06-02
+        </time>
+      </a>
+    </span>
+    <br />
+    
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+          <h2 id="广雅花都信息竞赛周刊第3期"><a href="#广雅花都信息竞赛周刊第3期" class="headerlink" title="广雅花都信息竞赛周刊第3期"></a>广雅花都信息竞赛周刊第3期</h2><h3 id="0-简介"><a href="#0-简介" class="headerlink" title="0.简介"></a>0.简介</h3><h3 id="1-初始化方式"><a href="#1-初始化方式" class="headerlink" title="1.初始化方式"></a>1.初始化方式</h3><h3 id="2-常用成员函数"><a href="#2-常用成员函数" class="headerlink" title="2.常用成员函数"></a>2.常用成员函数</h3><h3 id="3-应用和相关例题"><a href="#3-应用和相关例题" class="headerlink" title="3.应用和相关例题"></a>3.应用和相关例题</h3>
+      
+    </div>
+    
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/GuangYaHuaduTeam.github.io/categories/周刊/">周刊</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/GuangYaHuaduTeam.github.io/tags/STL/">STL</a><a href="/GuangYaHuaduTeam.github.io/tags/STL容器/">STL容器</a><a href="/GuangYaHuaduTeam.github.io/tags/map/">map</a><a href="/GuangYaHuaduTeam.github.io/tags/set/">set</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+  
+    
+    <h3 class="article-read"><a href="/GuangYaHuaduTeam.github.io/2022/06/02/0003-STL容器系列之map和set容器的使用/"><span>点击阅读</span></a></h3>
+    
+  
+</article>
+
+
+
+
+
+  <article class="article-container ">
+
+  
+    
+    <h3 class="article-title"><a href="/GuangYaHuaduTeam.github.io/2022/06/02/0005-STL容器系列之multiset和multimap容器的使用/"><span>STL容器系列之multiset，multimap和deque容器的使用(拓展)</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/GuangYaHuaduTeam.github.io/2022/06/02/0005-STL容器系列之multiset和multimap容器的使用/" rel="bookmark">
+        <time class="entry-date published" datetime="2022-06-02T10:20:49.853Z">
+          2022-06-02
+        </time>
+      </a>
+    </span>
+    <br />
+    
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+          <h2 id="广雅花都信息竞赛周刊第5期"><a href="#广雅花都信息竞赛周刊第5期" class="headerlink" title="广雅花都信息竞赛周刊第5期"></a>广雅花都信息竞赛周刊第5期</h2><h3 id="0-简介"><a href="#0-简介" class="headerlink" title="0.简介"></a>0.简介</h3><h3 id="1-初始化方式"><a href="#1-初始化方式" class="headerlink" title="1.初始化方式"></a>1.初始化方式</h3><h3 id="2-常用成员函数"><a href="#2-常用成员函数" class="headerlink" title="2.常用成员函数"></a>2.常用成员函数</h3><h3 id="3-应用和相关例题"><a href="#3-应用和相关例题" class="headerlink" title="3.应用和相关例题"></a>3.应用和相关例题</h3>
+      
+    </div>
+    
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/GuangYaHuaduTeam.github.io/categories/周刊/">周刊</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/GuangYaHuaduTeam.github.io/tags/STL/">STL</a><a href="/GuangYaHuaduTeam.github.io/tags/STL容器/">STL容器</a><a href="/GuangYaHuaduTeam.github.io/tags/multimap/">multimap</a><a href="/GuangYaHuaduTeam.github.io/tags/multiset/">multiset</a><a href="/GuangYaHuaduTeam.github.io/tags/deque/">deque</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+  
+    
+    <h3 class="article-read"><a href="/GuangYaHuaduTeam.github.io/2022/06/02/0005-STL容器系列之multiset和multimap容器的使用/"><span>点击阅读</span></a></h3>
+    
+  
+</article>
+
+
+
+
+
+  <article class="article-container ">
+
+  
+    
+    <h3 class="article-title"><a href="/GuangYaHuaduTeam.github.io/2022/06/02/0004-STL容器系列之priority容器的使用/"><span>STL容器系列之priority_queue容器的使用</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/GuangYaHuaduTeam.github.io/2022/06/02/0004-STL容器系列之priority容器的使用/" rel="bookmark">
+        <time class="entry-date published" datetime="2022-06-02T10:20:49.853Z">
+          2022-06-02
+        </time>
+      </a>
+    </span>
+    <br />
+    
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+          <h2 id="广雅花都信息竞赛周刊第4期"><a href="#广雅花都信息竞赛周刊第4期" class="headerlink" title="广雅花都信息竞赛周刊第4期"></a>广雅花都信息竞赛周刊第4期</h2><h3 id="0-简介"><a href="#0-简介" class="headerlink" title="0.简介"></a>0.简介</h3><h3 id="1-初始化方式"><a href="#1-初始化方式" class="headerlink" title="1.初始化方式"></a>1.初始化方式</h3><h3 id="2-常用成员函数"><a href="#2-常用成员函数" class="headerlink" title="2.常用成员函数"></a>2.常用成员函数</h3><h3 id="3-应用和相关例题"><a href="#3-应用和相关例题" class="headerlink" title="3.应用和相关例题"></a>3.应用和相关例题</h3>
+      
+    </div>
+    
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/GuangYaHuaduTeam.github.io/categories/周刊/">周刊</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/GuangYaHuaduTeam.github.io/tags/STL/">STL</a><a href="/GuangYaHuaduTeam.github.io/tags/STL容器/">STL容器</a><a href="/GuangYaHuaduTeam.github.io/tags/priority-queue/">priority_queue</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+  
+    
+    <h3 class="article-read"><a href="/GuangYaHuaduTeam.github.io/2022/06/02/0004-STL容器系列之priority容器的使用/"><span>点击阅读</span></a></h3>
+    
+  
+</article>
+
+
+
+
+
+  <article class="article-container ">
+
+  
+    
+    <h3 class="article-title"><a href="/GuangYaHuaduTeam.github.io/2022/06/02/0002-STL容器系列之vector和list容器的使用/"><span>STL容器系列之vector和list容器的使用</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/GuangYaHuaduTeam.github.io/2022/06/02/0002-STL容器系列之vector和list容器的使用/" rel="bookmark">
+        <time class="entry-date published" datetime="2022-06-02T10:20:49.834Z">
+          2022-06-02
+        </time>
+      </a>
+    </span>
+    <br />
+    
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+          <h2 id="广雅花都信息竞赛周刊第2期"><a href="#广雅花都信息竞赛周刊第2期" class="headerlink" title="广雅花都信息竞赛周刊第2期"></a>广雅花都信息竞赛周刊第2期</h2><h3 id="0-简介"><a href="#0-简介" class="headerlink" title="0.简介"></a>0.简介</h3><h3 id="1-初始化方式"><a href="#1-初始化方式" class="headerlink" title="1.初始化方式"></a>1.初始化方式</h3><h3 id="2-常用成员函数"><a href="#2-常用成员函数" class="headerlink" title="2.常用成员函数"></a>2.常用成员函数</h3><h3 id="3-应用和相关例题"><a href="#3-应用和相关例题" class="headerlink" title="3.应用和相关例题"></a>3.应用和相关例题</h3>
+      
+    </div>
+    
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/GuangYaHuaduTeam.github.io/categories/周刊/">周刊</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/GuangYaHuaduTeam.github.io/tags/STL/">STL</a><a href="/GuangYaHuaduTeam.github.io/tags/STL容器/">STL容器</a><a href="/GuangYaHuaduTeam.github.io/tags/vector/">vector</a><a href="/GuangYaHuaduTeam.github.io/tags/list/">list</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+  
+    
+    <h3 class="article-read"><a href="/GuangYaHuaduTeam.github.io/2022/06/02/0002-STL容器系列之vector和list容器的使用/"><span>点击阅读</span></a></h3>
+    
+  
+</article>
+
+
+
+
+
+  <article class="article-container ">
+
+  
+    
+    <h3 class="article-title"><a href="/GuangYaHuaduTeam.github.io/2022/06/02/0001-STL容器系列之queue和stack容器的使用/"><span>STL容器系列之queue和stack容器的使用</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/GuangYaHuaduTeam.github.io/2022/06/02/0001-STL容器系列之queue和stack容器的使用/" rel="bookmark">
+        <time class="entry-date published" datetime="2022-06-02T10:20:49.814Z">
+          2022-06-02
+        </time>
+      </a>
+    </span>
+    <br />
+    
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+          <h2 id="广雅花都信息竞赛周刊第1期"><a href="#广雅花都信息竞赛周刊第1期" class="headerlink" title="广雅花都信息竞赛周刊第1期"></a>广雅花都信息竞赛周刊第1期</h2><h3 id="0-简介"><a href="#0-简介" class="headerlink" title="0.简介"></a>0.简介</h3><h3 id="1-初始化方式"><a href="#1-初始化方式" class="headerlink" title="1.初始化方式"></a>1.初始化方式</h3><h3 id="2-常用成员函数"><a href="#2-常用成员函数" class="headerlink" title="2.常用成员函数"></a>2.常用成员函数</h3><h3 id="3-应用和相关例题"><a href="#3-应用和相关例题" class="headerlink" title="3.应用和相关例题"></a>3.应用和相关例题</h3>
+      
+    </div>
+    
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/GuangYaHuaduTeam.github.io/categories/周刊/">周刊</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/GuangYaHuaduTeam.github.io/tags/STL/">STL</a><a href="/GuangYaHuaduTeam.github.io/tags/STL容器/">STL容器</a><a href="/GuangYaHuaduTeam.github.io/tags/queue/">queue</a><a href="/GuangYaHuaduTeam.github.io/tags/stack/">stack</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+  
+    
+    <h3 class="article-read"><a href="/GuangYaHuaduTeam.github.io/2022/06/02/0001-STL容器系列之queue和stack容器的使用/"><span>点击阅读</span></a></h3>
+    
+  
+</article>
+
+
+
+
+
+
+<nav class="pagination">
+  
+  
+</nav>
+            </main>
+            <div class="sidebar
+                    col-lg-3 col-lg-offset-0
+                    col-md-3 col-md-offset-0
+                    col-sm-12
+                    col-xs-12
+                    sidebar-container
+                ">
+
+                <div class="sidebar-container">
+
+
+
+<div class="search-container">
+<form class="site-search-form">
+    <span class="glyphicon glyphicon-search"></span><input type="text" id="local-search-input" class="st-search-input" placeholder="Search..." />
+</form>
+<div id="local-search-result" class="local-search-result-cls"></div>
+</div>
+<script type="text/javascript" id="local.search.active">
+var inputArea       = document.querySelector("#local-search-input");
+inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script>
+
+
+
+
+    <div class="categories-container" style="margin-top:40px;">
+        <p>归档:</p>
+            
+                <a href="/GuangYaHuaduTeam.github.io/categories/%E5%91%A8%E5%88%8A/" title="周刊" rel="6">周刊</a>
+            
+                <a href="/GuangYaHuaduTeam.github.io/categories/%E5%91%A8%E5%88%8A/%E9%99%84%E5%88%8A/" title="附刊" rel="1">附刊</a>
+            
+    </div>
+
+
+
+
+    <div class="social-container" style="margin-top:40px;">
+        <p>Links:</p>
+            
+                
+                    <li class="social-item"><i class="fa fa-fw fa-github"></i><a target="_blank" rel="noopener" href="https://github.com/GuangYaHuaduOITeam /">GitHub</a></li>
+                
+            
+    </div>
+
+</div>
+            </div>
+          </div>
+        </div>
+        
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/BosenY/Lap" target="_blank">Lap</a>
+    <br/><span id="busuanzi_container_site_uv"> 
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+    </br>
+    
+      
+        &copy; 2022 广雅中学花都校区信息竞赛
+      
+    
+  </p>
+</footer>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-92842840-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+  </div>
+
+</div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/draw-something/dist/draw.min.js"></script>
+  <script>
+    let maxNum = Number.parseInt('10')
+    let iconText = 'C++'
+    let color = 'grey'
+    new Draw({maxNum, iconText, color})
+  </script>
+
+<script src="/GuangYaHuaduTeam.github.io/js/index.js"></script>
+<script src="/GuangYaHuaduTeam.github.io/js/search.js"></script>
+
+</body>
+</html>
