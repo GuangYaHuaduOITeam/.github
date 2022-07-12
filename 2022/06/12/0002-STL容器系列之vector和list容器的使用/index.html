@@ -4,7 +4,7 @@
 <p>    这篇周刊的知识量很大,建议准备好笔记本:)</p>
 <h2 id="1-基础知识-迭代器简介"><a href="#1-基础知识-迭代器简介" class="headerlink" title="1.基础知识-迭代器简介"></a>1.基础知识-迭代器简介</h2><h3 id="1-0-迭代器简介"><a href="#1-0-迭代器简介" class="headerlink" title="1.0 迭代器简介"></a>1.0 迭代器简介</h3><p>    在学习<code>vector</code>和<code>list</code>之前,我们首先要来了解STL容器中的重要内容:迭代器.</p>
 <p>    简单来说,迭代器是一种专门为STL容器设计的<strong>指针</strong>,但迭代器与一般的指针相比,具有安全性更强,更直观,而且在使用STL容器时,迭代器也是<strong>必不可少的内容</strong>.</p>
-<p>    也就是说,我们可以将迭代器看作一个<strong>复杂了一些的指针</strong>.</p>
+<p>    也就是说,我们可以将迭代器看作一个<strong>复杂了一些的指针</strong>.可以用来检查容器内元素并遍历元素.</p>
 <p>    C++迭代器分为多种,不同的STL容器支持的迭代器种类<strong>会随容器特性的不同而不同</strong>,在此处仅介绍竞赛中常用的两种:<strong>随机访问迭代器</strong>和<strong>双向迭代器</strong>,下表是STL容器对这两种迭代器的支持情况:</p>
 <table>
 <thead>
@@ -62,7 +62,96 @@
 <h3 id="2-1-初始化"><a href="#2-1-初始化" class="headerlink" title="2.1 初始化"></a>2.1 初始化</h3><p><code>vector</code>的初始化方式主要有:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; a;    <span class="comment">//定义一个空的存储int类型元素的vector</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(<span class="number">10</span>)</span></span>;    <span class="comment">//定义一个包含10个元素的vector(元素初值不确定)</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(<span class="number">10</span>, <span class="number">1</span>)</span></span>;    <span class="comment">//定义一个包含10个元素的vector,且指定每个元素的初值为1</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(b)</span></span>;    <span class="comment">//整体拷贝初始化,其中b也是一个vector,初始化后的a与b包含元素相同</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(b.begin() + <span class="number">1</span>, b.begin() + <span class="number">3</span>)</span></span>;    <span class="comment">//a中包含b中的1到3的所有元素(b为vector)</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(c, c + <span class="number">7</span>)</span></span>;    <span class="comment">//c为一数组,初始化后a包含c从0到7的所有元素</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="2-2-常用函数"><a href="#2-2-常用函数" class="headerlink" title="2.2 常用函数"></a>2.2 常用函数</h3><h2 id="3-list部分"><a href="#3-list部分" class="headerlink" title="3.list部分"></a>3.list部分</h2><h2 id="4-vector-list和传统数组的速度比较"><a href="#4-vector-list和传统数组的速度比较" class="headerlink" title="4.vector,list和传统数组的速度比较"></a>4.vector,list和传统数组的速度比较</h2></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2022-06-12</span><i class="fa fa-tag"></i><a class="tag" href="/.github/categories/周刊/" title="周刊">周刊 </a><a class="tag" href="/.github/tags/小技巧/" title="小技巧">小技巧 </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://guangyahuaduoiteam.github.io/.github/2022/06/12/0002-STL容器系列之vector和list容器的使用/,广雅中学花都校区信息竞赛,STL容器系列之vector和list容器的使用,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/.github/2022/06/19/C++%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2-string%E4%B8%93%E9%A2%98/" title="C++的字符串-string专题">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/.github/2022/06/11/cout%E7%9A%84%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" title="cout的进阶使用技巧">下一篇</a></li></ul></div><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.7/dist/Valine.min.js?v=undefined"></script><script>var valine = new Valine({
+<h3 id="2-2-常用函数"><a href="#2-2-常用函数" class="headerlink" title="2.2 常用函数"></a>2.2 常用函数</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>参数</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>assign()</td>
+<td></td>
+<td>对vector进行赋值</td>
+</tr>
+<tr>
+<td>back()</td>
+<td></td>
+<td>返回最后一个元素的<strong>值</strong></td>
+</tr>
+<tr>
+<td>front()</td>
+<td></td>
+<td>返回第一个元素的<strong>值</strong></td>
+</tr>
+<tr>
+<td>[i]</td>
+<td></td>
+<td>即<strong>下标</strong>,访问第i个元素</td>
+</tr>
+<tr>
+<td>clear()</td>
+<td></td>
+<td>清空vector</td>
+</tr>
+<tr>
+<td>empty()</td>
+<td></td>
+<td>判断vector是否为空</td>
+</tr>
+<tr>
+<td>pop_back()</td>
+<td></td>
+<td>删除最后一个元素</td>
+</tr>
+<tr>
+<td>erase()</td>
+<td></td>
+<td>删除指定区间内的元素</td>
+</tr>
+<tr>
+<td>push_back()</td>
+<td></td>
+<td>将一个元素加到vector末尾</td>
+</tr>
+<tr>
+<td>insert()</td>
+<td></td>
+<td>插入一个元素</td>
+</tr>
+<tr>
+<td>size()</td>
+<td>无</td>
+<td>返回vector<strong>元素个数</strong></td>
+</tr>
+<tr>
+<td>capacity()</td>
+<td>无</td>
+<td>返回vector<strong>可以容纳的元素个数</strong></td>
+</tr>
+<tr>
+<td>resize()</td>
+<td>整数,<em>整数</em> <a href="%E6%96%9C%E4%BD%93%E5%AD%97%E4%BB%A3%E8%A1%A8%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0">^1</a></td>
+<td>将vector的容量改为指定值,<strong>多则删,少则补</strong>,若指定初始值则将多出的元素(如果有)设为指定初始值</td>
+</tr>
+<tr>
+<td>reserve()</td>
+<td>整数</td>
+<td>将容量扩充至指定值</td>
+</tr>
+<tr>
+<td>swap()</td>
+<td>另一个vector</td>
+<td>将两个vector的元素<strong>整体</strong>交换</td>
+</tr>
+<tr>
+<td>&#x3D;&#x3D;&#x2F;!&#x3D;&#x2F;&gt;&#x3D;&#x2F;&gt;&#x2F;&lt;&#x3D;&#x2F;&lt;(比较运算符)</td>
+<td>略</td>
+<td>略(注意使用某个比较运算符的时候,vector中所存储的元素类型<strong>必须支持这种比较运算符</strong>)</td>
+</tr>
+</tbody></table>
+<h3 id="2-3-常用操作"><a href="#2-3-常用操作" class="headerlink" title="2.3 常用操作"></a>2.3 常用操作</h3><h4 id="2-3-1-对vector添加元素的几种方式"><a href="#2-3-1-对vector添加元素的几种方式" class="headerlink" title="2.3.1 对vector添加元素的几种方式"></a>2.3.1 对vector添加元素的几种方式</h4><h4 id="2-3-2-访问元素"><a href="#2-3-2-访问元素" class="headerlink" title="2.3.2 访问元素"></a>2.3.2 访问元素</h4><h4 id="2-3-3-修改及删除元素"><a href="#2-3-3-修改及删除元素" class="headerlink" title="2.3.3 修改及删除元素"></a>2.3.3 修改及删除元素</h4><h4 id="2-3-4-杂项"><a href="#2-3-4-杂项" class="headerlink" title="2.3.4 杂项"></a>2.3.4 杂项</h4><h2 id="3-list部分"><a href="#3-list部分" class="headerlink" title="3.list部分"></a>3.list部分</h2><h2 id="4-vector-list和传统数组的速度比较"><a href="#4-vector-list和传统数组的速度比较" class="headerlink" title="4.vector,list和传统数组的速度比较"></a>4.vector,list和传统数组的速度比较</h2></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2022-06-12</span><i class="fa fa-tag"></i><a class="tag" href="/.github/categories/周刊/" title="周刊">周刊 </a><a class="tag" href="/.github/tags/小技巧/" title="小技巧">小技巧 </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://guangyahuaduoiteam.github.io/.github/2022/06/12/0002-STL容器系列之vector和list容器的使用/,广雅中学花都校区信息竞赛,STL容器系列之vector和list容器的使用,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/.github/2022/06/19/C++%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2-string%E4%B8%93%E9%A2%98/" title="C++的字符串-string专题">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/.github/2022/06/11/cout%E7%9A%84%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" title="cout的进阶使用技巧">下一篇</a></li></ul></div><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.7/dist/Valine.min.js?v=undefined"></script><script>var valine = new Valine({
   el:'#vcomments',
   notify:false || false, 
   verify:false|| false, 
