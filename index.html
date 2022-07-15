@@ -268,6 +268,36 @@ mjx-container[display="true"] + br {
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/.github/2022/07/10/C++20%E6%A0%87%E5%87%86%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7-%E4%B8%BA%E4%BB%80%E4%B9%88C++20%E6%98%AFC++%E5%8E%86%E5%8F%B2%E4%B8%8A%E7%9A%84%E4%B8%80%E6%AC%A1%E9%87%8D%E5%A4%A7%E6%9B%B4%E6%96%B0/">
+                C++漫谈-C++20标准的新特性
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2022-07-10</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/.github/categories/漫谈/">漫谈</a>
+                </span>
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h1 id="C-20标准的新特性-为什么C-20是C-历史上的一次重大更新"><a href="#C-20标准的新特性-为什么C-20是C-历史上的一次重大更新" class="headerlink" title="C++20标准的新特性-为什么C++20是C++历史上的一次重大更新"></a>C++20标准的新特性-为什么C++20是C++历史上的一次重大更新</h1>
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/.github/2022/07/10/%E4%BD%BF%E7%94%A8strstream%E5%AF%B9string%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/">
                 使用strstream对string进行操作
             </a>
@@ -473,7 +503,79 @@ mjx-container[display="true"] + br {
 <p>    <strong>不要被这些专有名词和长篇大论吓到了</strong>,今天我们<strong>只会介绍</strong>这些函数中竞赛代码<strong>最常用</strong>的几个.</p>
 <p>    注意:algorithm中的函数虽然基本兼容传统数组,但是algorithm与<strong>STL容器</strong>搭配起来才是最香的!在阅读本文之前,你<strong>最好确保你阅读了前几期讲解STL容器的周刊,并理解了其中的STL容器和迭代器的概念</strong>.</p>
 <p>    本文下方的完整函数表基本按照<a target="_blank" rel="noopener" href="https://en.cppreference.com/">C++ Reference</a>的分类和列表撰写,但是没有列出C++20中对各个函数的ranges版本,如果有兴趣了解的可以查询相关资料.</p>
-<h2 id="1-常用函数介绍"><a href="#1-常用函数介绍" class="headerlink" title="1.常用函数介绍"></a>1.常用函数介绍</h2><h2 id="2-完整函数表"><a href="#2-完整函数表" class="headerlink" title="2.完整函数表"></a>2.完整函数表</h2><h3 id="2-1-非修改性队列操作-Non-modifying-sequence-operations"><a href="#2-1-非修改性队列操作-Non-modifying-sequence-operations" class="headerlink" title="2.1 非修改性队列操作(Non-modifying sequence operations)"></a>2.1 非修改性队列操作(Non-modifying sequence operations)</h3><h3 id="2-2-修改性队列操作-Modifying-sequence-operations"><a href="#2-2-修改性队列操作-Modifying-sequence-operations" class="headerlink" title="2.2 修改性队列操作(Modifying sequence operations)"></a>2.2 修改性队列操作(Modifying sequence operations)</h3><h3 id="2-3-划分操作-Partitioning-operations"><a href="#2-3-划分操作-Partitioning-operations" class="headerlink" title="2.3 划分操作(Partitioning operations)"></a>2.3 划分操作(Partitioning operations)</h3><h3 id="2-4-排序操作-Sorting-operations"><a href="#2-4-排序操作-Sorting-operations" class="headerlink" title="2.4 排序操作(Sorting operations)"></a>2.4 排序操作(Sorting operations)</h3><h3 id="2-5-在已排序队列上的二分搜索操作-Binary-search-operations-on-sorted-ranges"><a href="#2-5-在已排序队列上的二分搜索操作-Binary-search-operations-on-sorted-ranges" class="headerlink" title="2.5 在已排序队列上的二分搜索操作(Binary search operations (on sorted ranges))"></a>2.5 在已排序队列上的二分搜索操作(Binary search operations (on sorted ranges))</h3><h3 id="2-6-其他已排序队列上的操作-Other-operations-on-sorted-ranges"><a href="#2-6-其他已排序队列上的操作-Other-operations-on-sorted-ranges" class="headerlink" title="2.6 其他已排序队列上的操作(Other operations on sorted ranges)"></a>2.6 其他已排序队列上的操作(Other operations on sorted ranges)</h3><h3 id="2-7-在已排序队列上的集合操作-Set-operations-on-sorted-ranges"><a href="#2-7-在已排序队列上的集合操作-Set-operations-on-sorted-ranges" class="headerlink" title="2.7 在已排序队列上的集合操作(Set operations (on sorted ranges))"></a>2.7 在已排序队列上的集合操作(Set operations (on sorted ranges))</h3><h3 id="2-8-堆操作-Heap-operations"><a href="#2-8-堆操作-Heap-operations" class="headerlink" title="2.8 堆操作(Heap operations)"></a>2.8 堆操作(Heap operations)</h3><h3 id="2-9-最值操作-Minimum-x2F-maximum-operations"><a href="#2-9-最值操作-Minimum-x2F-maximum-operations" class="headerlink" title="2.9 最值操作(Minimum/maximum operations)"></a>2.9 最值操作(Minimum/maximum operations)</h3><h3 id="2-10-比较操作-Comparison-operations"><a href="#2-10-比较操作-Comparison-operations" class="headerlink" title="2.10 比较操作(Comparison operations)"></a>2.10 比较操作(Comparison operations)</h3><h3 id="2-11-排列操作-Permutation-operations"><a href="#2-11-排列操作-Permutation-operations" class="headerlink" title="2.11 排列操作(Permutation operations)"></a>2.11 排列操作(Permutation operations)</h3><h3 id="2-12-数值运算-Numeric-operations-定义位于头文件numeric内"><a href="#2-12-数值运算-Numeric-operations-定义位于头文件numeric内" class="headerlink" title="2.12 数值运算(Numeric operations) (定义位于头文件numeric内)"></a>2.12 数值运算(Numeric operations) (<strong>定义位于头文件numeric内</strong>)</h3><h3 id="2-13-未初始化内存上的操作-Operations-on-uninitialized-memory-定义位于头文件memory内"><a href="#2-13-未初始化内存上的操作-Operations-on-uninitialized-memory-定义位于头文件memory内" class="headerlink" title="2.13 未初始化内存上的操作(Operations on uninitialized memory) (定义位于头文件memory内)"></a>2.13 未初始化内存上的操作(Operations on uninitialized memory) (<strong>定义位于头文件memory内</strong>)</h3><h3 id="2-14-C库算法-C-library-algorithms"><a href="#2-14-C库算法-C-library-algorithms" class="headerlink" title="2.14 C库算法(C library algorithms)"></a>2.14 C库算法(C library algorithms)</h3><h3 id="2-1-非修改性序列操作"><a href="#2-1-非修改性序列操作" class="headerlink" title="2.1 非修改性序列操作"></a>2.1 非修改性序列操作</h3><table>
+<h2 id="1-常用函数介绍"><a href="#1-常用函数介绍" class="headerlink" title="1.常用函数介绍"></a>1.常用函数介绍</h2><h2 id="2-完整函数表"><a href="#2-完整函数表" class="headerlink" title="2.完整函数表"></a>2.完整函数表</h2><h3 id="2-1-非修改性队列操作-Non-modifying-sequence-operations"><a href="#2-1-非修改性队列操作-Non-modifying-sequence-operations" class="headerlink" title="2.1 非修改性队列操作(Non-modifying sequence operations)"></a>2.1 非修改性队列操作(Non-modifying sequence operations)</h3><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>all_of()</td>
+<td></td>
+</tr>
+<tr>
+<td>any_of()</td>
+<td></td>
+</tr>
+<tr>
+<td>none_of()</td>
+<td></td>
+</tr>
+<tr>
+<td>for_each()</td>
+<td></td>
+</tr>
+<tr>
+<td>for_each_n()</td>
+<td></td>
+</tr>
+<tr>
+<td>count()</td>
+<td></td>
+</tr>
+<tr>
+<td>count_if()</td>
+<td></td>
+</tr>
+<tr>
+<td>mismatch()</td>
+<td></td>
+</tr>
+<tr>
+<td>find()</td>
+<td></td>
+</tr>
+<tr>
+<td>find_if()</td>
+<td></td>
+</tr>
+<tr>
+<td>find_if_not()</td>
+<td></td>
+</tr>
+<tr>
+<td>find_end()</td>
+<td></td>
+</tr>
+<tr>
+<td>find_first_of()</td>
+<td></td>
+</tr>
+<tr>
+<td>adjacent_find()</td>
+<td></td>
+</tr>
+<tr>
+<td>search()</td>
+<td></td>
+</tr>
+<tr>
+<td>search_n()</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="2-2-修改性队列操作-Modifying-sequence-operations"><a href="#2-2-修改性队列操作-Modifying-sequence-operations" class="headerlink" title="2.2 修改性队列操作(Modifying sequence operations)"></a>2.2 修改性队列操作(Modifying sequence operations)</h3><h3 id="2-3-划分操作-Partitioning-operations"><a href="#2-3-划分操作-Partitioning-operations" class="headerlink" title="2.3 划分操作(Partitioning operations)"></a>2.3 划分操作(Partitioning operations)</h3><h3 id="2-4-排序操作-Sorting-operations"><a href="#2-4-排序操作-Sorting-operations" class="headerlink" title="2.4 排序操作(Sorting operations)"></a>2.4 排序操作(Sorting operations)</h3><h3 id="2-5-在已排序队列上的二分搜索操作-Binary-search-operations-on-sorted-ranges"><a href="#2-5-在已排序队列上的二分搜索操作-Binary-search-operations-on-sorted-ranges" class="headerlink" title="2.5 在已排序队列上的二分搜索操作(Binary search operations (on sorted ranges))"></a>2.5 在已排序队列上的二分搜索操作(Binary search operations (on sorted ranges))</h3><h3 id="2-6-其他已排序队列上的操作-Other-operations-on-sorted-ranges"><a href="#2-6-其他已排序队列上的操作-Other-operations-on-sorted-ranges" class="headerlink" title="2.6 其他已排序队列上的操作(Other operations on sorted ranges)"></a>2.6 其他已排序队列上的操作(Other operations on sorted ranges)</h3><h3 id="2-7-在已排序队列上的集合操作-Set-operations-on-sorted-ranges"><a href="#2-7-在已排序队列上的集合操作-Set-operations-on-sorted-ranges" class="headerlink" title="2.7 在已排序队列上的集合操作(Set operations (on sorted ranges))"></a>2.7 在已排序队列上的集合操作(Set operations (on sorted ranges))</h3><h3 id="2-8-堆操作-Heap-operations"><a href="#2-8-堆操作-Heap-operations" class="headerlink" title="2.8 堆操作(Heap operations)"></a>2.8 堆操作(Heap operations)</h3><h3 id="2-9-最值操作-Minimum-x2F-maximum-operations"><a href="#2-9-最值操作-Minimum-x2F-maximum-operations" class="headerlink" title="2.9 最值操作(Minimum/maximum operations)"></a>2.9 最值操作(Minimum/maximum operations)</h3><h3 id="2-10-比较操作-Comparison-operations"><a href="#2-10-比较操作-Comparison-operations" class="headerlink" title="2.10 比较操作(Comparison operations)"></a>2.10 比较操作(Comparison operations)</h3><h3 id="2-11-排列操作-Permutation-operations"><a href="#2-11-排列操作-Permutation-operations" class="headerlink" title="2.11 排列操作(Permutation operations)"></a>2.11 排列操作(Permutation operations)</h3><h3 id="2-12-数值运算-Numeric-operations-定义位于头文件numeric内"><a href="#2-12-数值运算-Numeric-operations-定义位于头文件numeric内" class="headerlink" title="2.12 数值运算(Numeric operations) (定义位于头文件numeric内)"></a>2.12 数值运算(Numeric operations) (<strong>定义位于头文件numeric内</strong>)</h3><h3 id="2-13-未初始化内存上的操作-Operations-on-uninitialized-memory-定义位于头文件memory内"><a href="#2-13-未初始化内存上的操作-Operations-on-uninitialized-memory-定义位于头文件memory内" class="headerlink" title="2.13 未初始化内存上的操作(Operations on uninitialized memory) (定义位于头文件memory内)"></a>2.13 未初始化内存上的操作(Operations on uninitialized memory) (<strong>定义位于头文件memory内</strong>)</h3><h3 id="2-14-C库算法-C-library-algorithms"><a href="#2-14-C库算法-C-library-algorithms" class="headerlink" title="2.14 C库算法(C library algorithms)"></a>2.14 C库算法(C library algorithms)</h3><h3 id="2-1-非修改性序列操作"><a href="#2-1-非修改性序列操作" class="headerlink" title="2.1 非修改性序列操作"></a>2.1 非修改性序列操作</h3><table>
 <thead>
 <tr>
 <th>函数名</th>
@@ -1144,148 +1246,6 @@ mjx-container[display="true"] + br {
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/.github/2022/06/11/cout%E7%9A%84%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
-                cout的进阶使用技巧
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2022-06-11</span>
-            
-            
-            
-                <span class="category">
-                    <a href="/.github/categories/周刊/">周刊</a>
-                </span>
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <h1 id="广雅花都信息竞赛周刊第2期-附刊"><a href="#广雅花都信息竞赛周刊第2期-附刊" class="headerlink" title="广雅花都信息竞赛周刊第2期-附刊"></a>广雅花都信息竞赛周刊第2期-附刊</h1><h2 id="0-简介"><a href="#0-简介" class="headerlink" title="0.简介"></a>0.简介</h2><p>    在做题的时候,我们常常会遇到有输出格式要求的题,这个时候C++自带的<code>cout</code>相比C语言的<code>printf</code>就显得捉襟见肘了.但是使用<code>printf</code>可能使我们的程序设计复杂化,那么有没有方法使用<code>cout</code>来进行格式化输出呢?答案是有的.就是使用C++自己的I/O流控制符,或<code>IO manipulate</code>来对<code>cout</code>的输出格式进行限制.</p>
-<h2 id="1-准备"><a href="#1-准备" class="headerlink" title="1.准备"></a>1.准备</h2><p>    在使用流控制符之前,我们首先要包含以下头文件:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br></pre></td></tr></table></figure>
-
-<p>    当然我们的万能头文件还是不负众望,也包含此头文件,所以我们也可以简单的使用:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-详细使用方法"><a href="#2-详细使用方法" class="headerlink" title="2.详细使用方法"></a>2.详细使用方法</h2><h3 id="基础格式"><a href="#基础格式" class="headerlink" title="基础格式"></a>基础格式</h3><p>    对于无需参数的控制符,直接使用<code>&lt;&lt;</code>输入至<code>cout</code>中,然后生效:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; hex;    <span class="comment">//设置16进制输出</span></span><br><span class="line">cout &lt;&lt; <span class="number">1892</span>;    <span class="comment">//输出764</span></span><br><span class="line"></span><br><span class="line">cout &lt;&lt; hex &lt;&lt; <span class="number">452</span>;    <span class="comment">//与上代码作用相同,输出1c4</span></span><br><span class="line"></span><br><span class="line">cout &lt;&lt; <span class="number">665</span> &lt;&lt; hex;    <span class="comment">//注意顺序!此处仍输出十进制</span></span><br></pre></td></tr></table></figure>
-
-<p>    对于有参数的控制符:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">5</span>) &lt;&lt; <span class="number">23.12456</span>    <span class="comment">//输出23.125(保留5位有效数字)</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="进制输出-dec-hex-oct-setbase-n"><a href="#进制输出-dec-hex-oct-setbase-n" class="headerlink" title="进制输出:dec,hex,oct,setbase(n)"></a>进制输出:dec,hex,oct,setbase(n)</h3><p>    <strong>dec</strong>:十进制输出</p>
-<p>    <strong>hex</strong>:十六进制输出</p>
-<p>    <strong>oct</strong>:八进制输出</p>
-<p>    <strong>setbase(n)</strong>:n进制输出,但是<strong>实际上还是只能输出8/10/16进制</strong></p>
-<p>    </p>
-<p>    示例:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; dec &lt;&lt; <span class="number">0x552</span> &lt;&lt; <span class="string">"\n"</span>;    <span class="comment">//用十进制输出十六进制数(输出:1362)</span></span><br><span class="line">cout &lt;&lt; hex &lt;&lt; <span class="number">0700</span> &lt;&lt; <span class="string">"\n"</span>;<span class="comment">//用十六进制输出八进制数(输出:1c0)</span></span><br><span class="line">cout &lt;&lt; oct &lt;&lt; <span class="number">0xE5</span> &lt;&lt; <span class="string">"\n"</span>;<span class="comment">//用八进制输出十六进制数(输出:345)</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">setbase</span>(<span class="number">8</span>) &lt;&lt; <span class="number">114514</span> &lt;&lt; <span class="string">"\n"</span>;<span class="comment">//用八进制输出十进制数(输出:337522)</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="场宽-setfill-n-setw-n"><a href="#场宽-setfill-n-setw-n" class="headerlink" title="场宽:setfill(n),setw(n)"></a>场宽:setfill(n),setw(n)</h3><p>    <strong>setfill(n)</strong>:在预设场宽中,如果需要填充字符,则用指定的字符n填充</p>
-<p>    <strong>setw(n)</strong>:设置场宽,即字段宽度,<strong>仅对流中后一个输出起作用</strong></p>
-<p>    示例:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; <span class="built_in">setw</span>(<span class="number">5</span>) &lt;&lt; <span class="number">25</span> &lt;&lt; <span class="number">36</span> &lt;&lt; <span class="string">"\n"</span>;<span class="comment">//输出"   2536",注意setw对36不起作用和25前的空格</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">setfill</span>(<span class="string">'@'</span>) &lt;&lt; <span class="built_in">setw</span>(<span class="number">8</span>) &lt;&lt; <span class="number">456</span>;<span class="comment">//输出"@@@@@456",此处使用了@来进行填充而非默认的空格</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="setprecision-n"><a href="#setprecision-n" class="headerlink" title="setprecision(n)"></a>setprecision(n)</h3><p>    保留n位<strong>有效数字</strong>:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">5</span>) &lt;&lt; <span class="number">25.12385</span> &lt;&lt; <span class="string">"\n"</span>;<span class="comment">//输出25.124,注意存在四舍五入</span></span><br><span class="line">cout &lt;&lt; <span class="number">25.12385</span> &lt;&lt; <span class="string">"\n"</span>;<span class="comment">//仍然输出25.124,注意此处与setw不同,setprecision还在起作用</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">2</span>) &lt;&lt; <span class="number">5.15</span> &lt;&lt; <span class="string">"\n"</span>;<span class="comment">//更改位数,输出5.2</span></span><br><span class="line">cout &lt;&lt; <span class="number">2</span>;<span class="comment">//输出2,注意setprecision对整型不起作用</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="setiosflags"><a href="#setiosflags" class="headerlink" title="setiosflags()"></a>setiosflags()</h3><p>    指定特定的输出格式,由于一部分不是很实用,在此处仅举几例:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="number">2.25</span> &lt;&lt; <span class="string">"\n"</span>;<span class="comment">//设置固定输出小数位,默认为6位,输出2.250000</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">3</span>) &lt;&lt; <span class="number">2.2225</span> &lt;&lt; <span class="string">"\n"</span>;<span class="comment">//在此处语境中setprecision变为保留几位小数,输出2.223,遵循四舍五入</span></span><br><span class="line">cout &lt;&lt; <span class="number">2</span>;<span class="comment">//对整数不起作用,输出2</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::scientific) &lt;&lt; <span class="number">2.2551</span> &lt;&lt; <span class="string">"\n"</span>;<span class="comment">//输出2.255100e+00</span></span><br><span class="line">cout &lt;&lt; <span class="number">121354.525</span> &lt;&lt; <span class="string">"\n"</span>;<span class="comment">//输出1.213545e+05,注意科学计数法前面部分依然默认输出6位小数</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="resetiosflags"><a href="#resetiosflags" class="headerlink" title="resetiosflags()"></a>resetiosflags()</h3><p>    重置已经设置的输出格式,如若在前面设置了<code>setiosflags(ios::fixed)</code>就可用<code>resetiosflags(ios::fixed)</code>取消.</p>
-<h2 id="3-控制符总表"><a href="#3-控制符总表" class="headerlink" title="3.控制符总表"></a>3.控制符总表</h2><table>
-<thead>
-<tr>
-<th>控制符</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>dec</td>
-<td>设置输出数字进制为十进制</td>
-</tr>
-<tr>
-<td>hex</td>
-<td>设置输出数字进制为十六进制</td>
-</tr>
-<tr>
-<td>oct</td>
-<td>设置输出数字为八进制</td>
-</tr>
-<tr>
-<td>setbase(n)</td>
-<td>设置输出数字为n进制</td>
-</tr>
-<tr>
-<td>setfill(n)</td>
-<td>设置填充字符(即setw(n)中填充的字符)</td>
-</tr>
-<tr>
-<td>setprecision(n)</td>
-<td>保留n位<strong>有效数字</strong>(注意是<strong>有效数字</strong>不是<strong>几位小数</strong>)</td>
-</tr>
-<tr>
-<td>setw(n)</td>
-<td>设置场宽(填充字符)</td>
-</tr>
-<tr>
-<td>setiosflags(ios::fixed)</td>
-<td><strong>浮点数</strong>强行显示n位小数(默认为6)</td>
-</tr>
-<tr>
-<td>setiosflags(ios::scientific)</td>
-<td><strong>浮点数</strong>显示为科学计数法</td>
-</tr>
-<tr>
-<td>setiosflags(ios::left)</td>
-<td>输出内容左对齐</td>
-</tr>
-<tr>
-<td>setiosflags(ios::right)</td>
-<td>输出内容右对齐</td>
-</tr>
-<tr>
-<td>setiosflags(ios::skipws)</td>
-<td>忽略前导空格</td>
-</tr>
-<tr>
-<td>setiosflags(ios::showpos)</td>
-<td>强制显示正负号(即正数前有+等)</td>
-</tr>
-<tr>
-<td>setiosflags(ios::showpoint)</td>
-<td>强制显示小数点</td>
-</tr>
-<tr>
-<td>setiosflags(ios::uppercase)</td>
-<td>在以科学计数法输出或十六进制输出字母时使用大写字母输出</td>
-</tr>
-<tr>
-<td>setiosflags(ios::lowercase)</td>
-<td>与上同,用小写字母输出</td>
-</tr>
-<tr>
-<td>resetiosflags()</td>
-<td>重置已经设置的输出格式状态,括号中应指定相应内容</td>
-</tr>
-</tbody></table>
-<p><a target="_blank" rel="noopener" href="https://github.com/Minecraft1248">本文由陈致格撰写</a></p>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1328,6 +1288,10 @@ mjx-container[display="true"] + br {
         <ul>
             
             <li>
+                <a class="footer-post" href="/.github/2022/07/10/C++20%E6%A0%87%E5%87%86%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7-%E4%B8%BA%E4%BB%80%E4%B9%88C++20%E6%98%AFC++%E5%8E%86%E5%8F%B2%E4%B8%8A%E7%9A%84%E4%B8%80%E6%AC%A1%E9%87%8D%E5%A4%A7%E6%9B%B4%E6%96%B0/">C++漫谈-C++20标准的新特性</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/.github/2022/07/10/%E4%BD%BF%E7%94%A8strstream%E5%AF%B9string%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/">使用strstream对string进行操作</a>
             </li>
             
@@ -1339,10 +1303,6 @@ mjx-container[display="true"] + br {
                 <a class="footer-post" href="/.github/2022/07/03/0005-%E5%9B%BE%E8%AE%BA(%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E7%AF%87)/">图论(基本概念篇)</a>
             </li>
             
-            <li>
-                <a class="footer-post" href="/.github/2022/07/03/C++%E5%AD%A6%E4%B9%A0%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/">C++学习书籍推荐</a>
-            </li>
-            
         </ul>
     </div>
 
@@ -1352,6 +1312,10 @@ mjx-container[display="true"] + br {
 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
     <h2>Categories</h2>
     <ul>
+        
+        <li>
+            <a class="footer-post" href="/.github/categories/%E6%BC%AB%E8%B0%88/">漫谈</a>
+        </li>
         
         <li>
             <a class="footer-post" href="/.github/categories/%E5%91%A8%E5%88%8A/%E9%99%84%E5%88%8A/">附刊</a>

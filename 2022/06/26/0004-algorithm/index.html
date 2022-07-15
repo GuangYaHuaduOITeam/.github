@@ -323,7 +323,79 @@ mjx-container[display="true"] + br {
 <p>    <strong>不要被这些专有名词和长篇大论吓到了</strong>,今天我们<strong>只会介绍</strong>这些函数中竞赛代码<strong>最常用</strong>的几个.</p>
 <p>    注意:algorithm中的函数虽然基本兼容传统数组,但是algorithm与<strong>STL容器</strong>搭配起来才是最香的!在阅读本文之前,你<strong>最好确保你阅读了前几期讲解STL容器的周刊,并理解了其中的STL容器和迭代器的概念</strong>.</p>
 <p>    本文下方的完整函数表基本按照<a target="_blank" rel="noopener" href="https://en.cppreference.com/">C++ Reference</a>的分类和列表撰写,但是没有列出C++20中对各个函数的ranges版本,如果有兴趣了解的可以查询相关资料.</p>
-<h2 id="1-常用函数介绍"><a href="#1-常用函数介绍" class="headerlink" title="1.常用函数介绍"></a>1.常用函数介绍</h2><h2 id="2-完整函数表"><a href="#2-完整函数表" class="headerlink" title="2.完整函数表"></a>2.完整函数表</h2><h3 id="2-1-非修改性队列操作-Non-modifying-sequence-operations"><a href="#2-1-非修改性队列操作-Non-modifying-sequence-operations" class="headerlink" title="2.1 非修改性队列操作(Non-modifying sequence operations)"></a>2.1 非修改性队列操作(Non-modifying sequence operations)</h3><h3 id="2-2-修改性队列操作-Modifying-sequence-operations"><a href="#2-2-修改性队列操作-Modifying-sequence-operations" class="headerlink" title="2.2 修改性队列操作(Modifying sequence operations)"></a>2.2 修改性队列操作(Modifying sequence operations)</h3><h3 id="2-3-划分操作-Partitioning-operations"><a href="#2-3-划分操作-Partitioning-operations" class="headerlink" title="2.3 划分操作(Partitioning operations)"></a>2.3 划分操作(Partitioning operations)</h3><h3 id="2-4-排序操作-Sorting-operations"><a href="#2-4-排序操作-Sorting-operations" class="headerlink" title="2.4 排序操作(Sorting operations)"></a>2.4 排序操作(Sorting operations)</h3><h3 id="2-5-在已排序队列上的二分搜索操作-Binary-search-operations-on-sorted-ranges"><a href="#2-5-在已排序队列上的二分搜索操作-Binary-search-operations-on-sorted-ranges" class="headerlink" title="2.5 在已排序队列上的二分搜索操作(Binary search operations (on sorted ranges))"></a>2.5 在已排序队列上的二分搜索操作(Binary search operations (on sorted ranges))</h3><h3 id="2-6-其他已排序队列上的操作-Other-operations-on-sorted-ranges"><a href="#2-6-其他已排序队列上的操作-Other-operations-on-sorted-ranges" class="headerlink" title="2.6 其他已排序队列上的操作(Other operations on sorted ranges)"></a>2.6 其他已排序队列上的操作(Other operations on sorted ranges)</h3><h3 id="2-7-在已排序队列上的集合操作-Set-operations-on-sorted-ranges"><a href="#2-7-在已排序队列上的集合操作-Set-operations-on-sorted-ranges" class="headerlink" title="2.7 在已排序队列上的集合操作(Set operations (on sorted ranges))"></a>2.7 在已排序队列上的集合操作(Set operations (on sorted ranges))</h3><h3 id="2-8-堆操作-Heap-operations"><a href="#2-8-堆操作-Heap-operations" class="headerlink" title="2.8 堆操作(Heap operations)"></a>2.8 堆操作(Heap operations)</h3><h3 id="2-9-最值操作-Minimum-x2F-maximum-operations"><a href="#2-9-最值操作-Minimum-x2F-maximum-operations" class="headerlink" title="2.9 最值操作(Minimum/maximum operations)"></a>2.9 最值操作(Minimum/maximum operations)</h3><h3 id="2-10-比较操作-Comparison-operations"><a href="#2-10-比较操作-Comparison-operations" class="headerlink" title="2.10 比较操作(Comparison operations)"></a>2.10 比较操作(Comparison operations)</h3><h3 id="2-11-排列操作-Permutation-operations"><a href="#2-11-排列操作-Permutation-operations" class="headerlink" title="2.11 排列操作(Permutation operations)"></a>2.11 排列操作(Permutation operations)</h3><h3 id="2-12-数值运算-Numeric-operations-定义位于头文件numeric内"><a href="#2-12-数值运算-Numeric-operations-定义位于头文件numeric内" class="headerlink" title="2.12 数值运算(Numeric operations) (定义位于头文件numeric内)"></a>2.12 数值运算(Numeric operations) (<strong>定义位于头文件numeric内</strong>)</h3><h3 id="2-13-未初始化内存上的操作-Operations-on-uninitialized-memory-定义位于头文件memory内"><a href="#2-13-未初始化内存上的操作-Operations-on-uninitialized-memory-定义位于头文件memory内" class="headerlink" title="2.13 未初始化内存上的操作(Operations on uninitialized memory) (定义位于头文件memory内)"></a>2.13 未初始化内存上的操作(Operations on uninitialized memory) (<strong>定义位于头文件memory内</strong>)</h3><h3 id="2-14-C库算法-C-library-algorithms"><a href="#2-14-C库算法-C-library-algorithms" class="headerlink" title="2.14 C库算法(C library algorithms)"></a>2.14 C库算法(C library algorithms)</h3><h3 id="2-1-非修改性序列操作"><a href="#2-1-非修改性序列操作" class="headerlink" title="2.1 非修改性序列操作"></a>2.1 非修改性序列操作</h3><table>
+<h2 id="1-常用函数介绍"><a href="#1-常用函数介绍" class="headerlink" title="1.常用函数介绍"></a>1.常用函数介绍</h2><h2 id="2-完整函数表"><a href="#2-完整函数表" class="headerlink" title="2.完整函数表"></a>2.完整函数表</h2><h3 id="2-1-非修改性队列操作-Non-modifying-sequence-operations"><a href="#2-1-非修改性队列操作-Non-modifying-sequence-operations" class="headerlink" title="2.1 非修改性队列操作(Non-modifying sequence operations)"></a>2.1 非修改性队列操作(Non-modifying sequence operations)</h3><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>all_of()</td>
+<td></td>
+</tr>
+<tr>
+<td>any_of()</td>
+<td></td>
+</tr>
+<tr>
+<td>none_of()</td>
+<td></td>
+</tr>
+<tr>
+<td>for_each()</td>
+<td></td>
+</tr>
+<tr>
+<td>for_each_n()</td>
+<td></td>
+</tr>
+<tr>
+<td>count()</td>
+<td></td>
+</tr>
+<tr>
+<td>count_if()</td>
+<td></td>
+</tr>
+<tr>
+<td>mismatch()</td>
+<td></td>
+</tr>
+<tr>
+<td>find()</td>
+<td></td>
+</tr>
+<tr>
+<td>find_if()</td>
+<td></td>
+</tr>
+<tr>
+<td>find_if_not()</td>
+<td></td>
+</tr>
+<tr>
+<td>find_end()</td>
+<td></td>
+</tr>
+<tr>
+<td>find_first_of()</td>
+<td></td>
+</tr>
+<tr>
+<td>adjacent_find()</td>
+<td></td>
+</tr>
+<tr>
+<td>search()</td>
+<td></td>
+</tr>
+<tr>
+<td>search_n()</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="2-2-修改性队列操作-Modifying-sequence-operations"><a href="#2-2-修改性队列操作-Modifying-sequence-operations" class="headerlink" title="2.2 修改性队列操作(Modifying sequence operations)"></a>2.2 修改性队列操作(Modifying sequence operations)</h3><h3 id="2-3-划分操作-Partitioning-operations"><a href="#2-3-划分操作-Partitioning-operations" class="headerlink" title="2.3 划分操作(Partitioning operations)"></a>2.3 划分操作(Partitioning operations)</h3><h3 id="2-4-排序操作-Sorting-operations"><a href="#2-4-排序操作-Sorting-operations" class="headerlink" title="2.4 排序操作(Sorting operations)"></a>2.4 排序操作(Sorting operations)</h3><h3 id="2-5-在已排序队列上的二分搜索操作-Binary-search-operations-on-sorted-ranges"><a href="#2-5-在已排序队列上的二分搜索操作-Binary-search-operations-on-sorted-ranges" class="headerlink" title="2.5 在已排序队列上的二分搜索操作(Binary search operations (on sorted ranges))"></a>2.5 在已排序队列上的二分搜索操作(Binary search operations (on sorted ranges))</h3><h3 id="2-6-其他已排序队列上的操作-Other-operations-on-sorted-ranges"><a href="#2-6-其他已排序队列上的操作-Other-operations-on-sorted-ranges" class="headerlink" title="2.6 其他已排序队列上的操作(Other operations on sorted ranges)"></a>2.6 其他已排序队列上的操作(Other operations on sorted ranges)</h3><h3 id="2-7-在已排序队列上的集合操作-Set-operations-on-sorted-ranges"><a href="#2-7-在已排序队列上的集合操作-Set-operations-on-sorted-ranges" class="headerlink" title="2.7 在已排序队列上的集合操作(Set operations (on sorted ranges))"></a>2.7 在已排序队列上的集合操作(Set operations (on sorted ranges))</h3><h3 id="2-8-堆操作-Heap-operations"><a href="#2-8-堆操作-Heap-operations" class="headerlink" title="2.8 堆操作(Heap operations)"></a>2.8 堆操作(Heap operations)</h3><h3 id="2-9-最值操作-Minimum-x2F-maximum-operations"><a href="#2-9-最值操作-Minimum-x2F-maximum-operations" class="headerlink" title="2.9 最值操作(Minimum/maximum operations)"></a>2.9 最值操作(Minimum/maximum operations)</h3><h3 id="2-10-比较操作-Comparison-operations"><a href="#2-10-比较操作-Comparison-operations" class="headerlink" title="2.10 比较操作(Comparison operations)"></a>2.10 比较操作(Comparison operations)</h3><h3 id="2-11-排列操作-Permutation-operations"><a href="#2-11-排列操作-Permutation-operations" class="headerlink" title="2.11 排列操作(Permutation operations)"></a>2.11 排列操作(Permutation operations)</h3><h3 id="2-12-数值运算-Numeric-operations-定义位于头文件numeric内"><a href="#2-12-数值运算-Numeric-operations-定义位于头文件numeric内" class="headerlink" title="2.12 数值运算(Numeric operations) (定义位于头文件numeric内)"></a>2.12 数值运算(Numeric operations) (<strong>定义位于头文件numeric内</strong>)</h3><h3 id="2-13-未初始化内存上的操作-Operations-on-uninitialized-memory-定义位于头文件memory内"><a href="#2-13-未初始化内存上的操作-Operations-on-uninitialized-memory-定义位于头文件memory内" class="headerlink" title="2.13 未初始化内存上的操作(Operations on uninitialized memory) (定义位于头文件memory内)"></a>2.13 未初始化内存上的操作(Operations on uninitialized memory) (<strong>定义位于头文件memory内</strong>)</h3><h3 id="2-14-C库算法-C-library-algorithms"><a href="#2-14-C库算法-C-library-algorithms" class="headerlink" title="2.14 C库算法(C library algorithms)"></a>2.14 C库算法(C library algorithms)</h3><h3 id="2-1-非修改性序列操作"><a href="#2-1-非修改性序列操作" class="headerlink" title="2.1 非修改性序列操作"></a>2.1 非修改性序列操作</h3><table>
 <thead>
 <tr>
 <th>函数名</th>
@@ -731,6 +803,10 @@ mjx-container[display="true"] + br {
         <ul>
             
             <li>
+                <a class="footer-post" href="/.github/2022/07/10/C++20%E6%A0%87%E5%87%86%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7-%E4%B8%BA%E4%BB%80%E4%B9%88C++20%E6%98%AFC++%E5%8E%86%E5%8F%B2%E4%B8%8A%E7%9A%84%E4%B8%80%E6%AC%A1%E9%87%8D%E5%A4%A7%E6%9B%B4%E6%96%B0/">C++漫谈-C++20标准的新特性</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/.github/2022/07/10/%E4%BD%BF%E7%94%A8strstream%E5%AF%B9string%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/">使用strstream对string进行操作</a>
             </li>
             
@@ -742,10 +818,6 @@ mjx-container[display="true"] + br {
                 <a class="footer-post" href="/.github/2022/07/03/0005-%E5%9B%BE%E8%AE%BA(%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E7%AF%87)/">图论(基本概念篇)</a>
             </li>
             
-            <li>
-                <a class="footer-post" href="/.github/2022/07/03/C++%E5%AD%A6%E4%B9%A0%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/">C++学习书籍推荐</a>
-            </li>
-            
         </ul>
     </div>
 
@@ -755,6 +827,10 @@ mjx-container[display="true"] + br {
 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
     <h2>Categories</h2>
     <ul>
+        
+        <li>
+            <a class="footer-post" href="/.github/categories/%E6%BC%AB%E8%B0%88/">漫谈</a>
+        </li>
         
         <li>
             <a class="footer-post" href="/.github/categories/%E5%91%A8%E5%88%8A/%E9%99%84%E5%88%8A/">附刊</a>
