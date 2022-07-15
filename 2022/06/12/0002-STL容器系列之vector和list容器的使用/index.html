@@ -74,7 +74,119 @@
     
 
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -235,7 +347,7 @@
 <p>注意一点,容器名和数组名最大的区别就是容器名是不能当作指针来使用的,所以访问容器的始末时需要使用函数<code>.begin()</code>或<code>.end()</code>来获取指向始末的<strong>迭代器</strong>,再通过用<code>*迭代器</code>的方式访问迭代器所指向的元素:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(<span class="number">10</span>, <span class="number">2</span>)</span></span>;</span><br><span class="line"><span class="type">int</span> a = *(a.<span class="built_in">begin</span>() + <span class="number">2</span>);    <span class="comment">//获取a的第2个元素    </span></span><br></pre></td></tr></table></figure>
 
-<h2 id="2-vector部分"><a href="#2-vector部分" class="headerlink" title="2.vector部分"></a>2.vector部分</h2><h3 id="2-0-简介"><a href="#2-0-简介" class="headerlink" title="2.0 简介"></a>2.0 简介</h3><p>    <code>vector</code>容器的特点基本与C++传统数组一致,其元素存储在内存中也是<strong>连续的</strong>,所以访问<code>vector</code>中任意元素的用时也是相同的,但是插入和删除元素花费的时间都是<code>O(n)</code>级的.所以在使用<code>vector</code>的场合不宜出现大量插入&#x2F;删除操作,否则会对性能产生较大影响.</p>
+<h2 id="2-vector部分"><a href="#2-vector部分" class="headerlink" title="2.vector部分"></a>2.vector部分</h2><h3 id="2-0-简介"><a href="#2-0-简介" class="headerlink" title="2.0 简介"></a>2.0 简介</h3><p>    <code>vector</code>容器的特点基本与C++传统数组一致,其元素存储在内存中也是<strong>连续的</strong>,所以访问<code>vector</code>中任意元素的用时也是相同的,但是插入和删除元素花费的时间都是<code>O(n)</code>级的.所以在使用<code>vector</code>的场合不宜出现大量插入/删除操作,否则会对性能产生较大影响.</p>
 <h3 id="2-1-初始化"><a href="#2-1-初始化" class="headerlink" title="2.1 初始化"></a>2.1 初始化</h3><p><code>vector</code>的初始化方式主要有:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; a;    <span class="comment">//定义一个空的存储int类型元素的vector</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(<span class="number">10</span>)</span></span>;    <span class="comment">//定义一个包含10个元素的vector(元素初值不确定)</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(<span class="number">10</span>, <span class="number">1</span>)</span></span>;    <span class="comment">//定义一个包含10个元素的vector,且指定每个元素的初值为1</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(b)</span></span>;    <span class="comment">//整体拷贝初始化,其中b也是一个vector,初始化后的a与b包含元素相同</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(b.begin() + <span class="number">1</span>, b.begin() + <span class="number">3</span>)</span></span>;    <span class="comment">//a中包含b中的1到3的所有元素(b为vector)</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(c, c + <span class="number">7</span>)</span></span>;    <span class="comment">//c为一数组,初始化后a包含c从0到7的所有元素</span></span><br></pre></td></tr></table></figure>
 
@@ -323,7 +435,7 @@
 <td>将两个vector的元素<strong>整体</strong>交换</td>
 </tr>
 <tr>
-<td>&#x3D;&#x3D;&#x2F;!&#x3D;&#x2F;&gt;&#x3D;&#x2F;&gt;&#x2F;&lt;&#x3D;&#x2F;&lt;(比较运算符)</td>
+<td>==/!=/&gt;=/&gt;/&lt;=/&lt;(比较运算符)</td>
 <td>略</td>
 <td>略(注意使用某个比较运算符的时候,vector中所存储的元素类型<strong>必须支持这种比较运算符</strong>)</td>
 </tr>
