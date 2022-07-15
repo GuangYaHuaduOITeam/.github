@@ -177,19 +177,40 @@
 
         <!-- Post Content -->
         <h1 id="广雅花都信息竞赛周刊第4期"><a href="#广雅花都信息竞赛周刊第4期" class="headerlink" title="广雅花都信息竞赛周刊第4期"></a>广雅花都信息竞赛周刊第4期</h1><h2 id="0-前言及介绍"><a href="#0-前言及介绍" class="headerlink" title="0.前言及介绍"></a>0.前言及介绍</h2><p>    我们在很多大佬的代码中或者洛谷上的各种<del>整活</del>题解中都能看到很多<strong>不知所云</strong>的各种函数.我们在惊叹这些各种函数是如何是我们的编程工作更加简洁和优雅的同时,也苦于自己只会一个<strong>sort()</strong> (当然有很多人sort()都用不明白),为了<del>解决</del>帮助上述群众,这篇文章就来讲讲这些函数背后的STL库-&lt;algorithm&gt;头文件.</p>
-<p>    algorithm头文件中包含了很多有用的函数,这些函数大致可以分为以下几类:</p>
+<p>    algorithm头文件中包含了很多有用的函数,这些函数大致可以分为以下几类(部分译名可能不准确):</p>
 <ul>
-<li><p>非修改性顺序操作（Non-modifying sequence operations）</p>
+<li><p>非修改性队列操作(Non-modifying sequence operations)</p>
 </li>
-<li><p>可变顺序操作（Mutating sequence operations）</p>
+<li><p>修改性队列操作(Modifying sequence operations)</p>
 </li>
-<li><p>排序和关系操作（Sorting and related operations）</p>
+<li><p>划分操作(Partitioning operations)</p>
 </li>
-<li><p>C库算法（C library algorithms）</p>
+<li><p>排序操作(Sorting operations)</p>
+</li>
+<li><p>在已排序队列上的二分搜索操作(Binary search operations (on sorted ranges))</p>
+</li>
+<li><p>其他已排序队列上的操作(Other operations on sorted ranges)</p>
+</li>
+<li><p>在已排序队列上的集合操作(Set operations (on sorted ranges))</p>
+</li>
+<li><p>堆操作(Heap operations)</p>
+</li>
+<li><p>最值操作(Minimum&#x2F;maximum operations)</p>
+</li>
+<li><p>比较操作(Comparison operations)</p>
+</li>
+<li><p>排列操作(Permutation operations)</p>
+</li>
+<li><p>数值运算(Numeric operations) (<strong>定义位于头文件numeric内</strong>)</p>
+</li>
+<li><p>未初始化内存上的操作(Operations on uninitialized memory) (<strong>定义位于头文件memory内</strong>)</p>
+</li>
+<li><p>C库算法(C library algorithms)</p>
 </li>
 </ul>
-<p>    今天我们只会介绍这些函数中竞赛代码常用的几个.</p>
+<p>    <strong>不要被这些专有名词和长篇大论吓到了</strong>,今天我们<strong>只会介绍</strong>这些函数中竞赛代码<strong>最常用</strong>的几个.</p>
 <p>    注意:algorithm中的函数虽然基本兼容传统数组,但是algorithm与<strong>STL容器</strong>搭配起来才是最香的!在阅读本文之前,你<strong>最好确保你阅读了前几期讲解STL容器的周刊,并理解了其中的STL容器和迭代器的概念</strong>.</p>
+<p>    本文下方的完整函数表基本按照<a target="_blank" rel="noopener" href="https://en.cppreference.com/">C++ Reference</a>的分类和列表撰写,但是没有列出C++20中对各个函数的ranges版本,如果有兴趣了解的可以查询相关资料.</p>
 <h2 id="1-常用函数介绍"><a href="#1-常用函数介绍" class="headerlink" title="1.常用函数介绍"></a>1.常用函数介绍</h2><h2 id="2-完整函数表"><a href="#2-完整函数表" class="headerlink" title="2.完整函数表"></a>2.完整函数表</h2><h3 id="2-1-非修改性序列操作"><a href="#2-1-非修改性序列操作" class="headerlink" title="2.1 非修改性序列操作"></a>2.1 非修改性序列操作</h3><table>
 <thead>
 <tr>
@@ -202,11 +223,19 @@
 <td></td>
 </tr>
 <tr>
+<td>for_each_n()</td>
+<td></td>
+</tr>
+<tr>
 <td>find()</td>
 <td></td>
 </tr>
 <tr>
 <td>find_if()</td>
+<td></td>
+</tr>
+<tr>
+<td>find_if_not()</td>
 <td></td>
 </tr>
 <tr>
@@ -243,6 +272,18 @@
 </tr>
 <tr>
 <td>search_n()</td>
+<td></td>
+</tr>
+<tr>
+<td>all_of()</td>
+<td></td>
+</tr>
+<tr>
+<td>any_of()</td>
+<td></td>
+</tr>
+<tr>
+<td>none_of()</td>
 <td></td>
 </tr>
 </tbody></table>
@@ -350,10 +391,18 @@
 <td></td>
 </tr>
 <tr>
-<td>random_shuffle()</td>
+<td>random_shuffle()&#x2F;shuffle()</td>
 <td></td>
 </tr>
+</tbody></table>
+<h3 id="2-3-分区操作"><a href="#2-3-分区操作" class="headerlink" title="2.3 分区操作"></a>2.3 分区操作</h3><table>
+<thead>
 <tr>
+<th>函数名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
 <td>partition()</td>
 <td></td>
 </tr>
@@ -361,8 +410,24 @@
 <td>stable_partition()</td>
 <td></td>
 </tr>
+<tr>
+<td>is_partitioned()</td>
+<td></td>
+</tr>
+<tr>
+<td>move()</td>
+<td></td>
+</tr>
+<tr>
+<td>move_backward()</td>
+<td></td>
+</tr>
+<tr>
+<td>sample()</td>
+<td></td>
+</tr>
 </tbody></table>
-<h3 id="2-3-序列排序及相关操作"><a href="#2-3-序列排序及相关操作" class="headerlink" title="2.3 序列排序及相关操作"></a>2.3 序列排序及相关操作</h3><table>
+<h3 id="2-4-序列排序及相关操作"><a href="#2-4-序列排序及相关操作" class="headerlink" title="2.4 序列排序及相关操作"></a>2.4 序列排序及相关操作</h3><table>
 <thead>
 <tr>
 <th>函数名</th>
@@ -383,6 +448,14 @@
 </tr>
 <tr>
 <td>partial_sort_copy()</td>
+<td></td>
+</tr>
+<tr>
+<td>is_sorted()</td>
+<td></td>
+</tr>
+<tr>
+<td>is_sorted_until()</td>
 <td></td>
 </tr>
 <tr>
@@ -450,6 +523,14 @@
 <td></td>
 </tr>
 <tr>
+<td>is_heap()</td>
+<td></td>
+</tr>
+<tr>
+<td>is_heap_until()</td>
+<td></td>
+</tr>
+<tr>
 <td>min()</td>
 <td></td>
 </tr>
@@ -458,11 +539,23 @@
 <td></td>
 </tr>
 <tr>
+<td>minmax()</td>
+<td></td>
+</tr>
+<tr>
 <td>min_element()</td>
 <td></td>
 </tr>
 <tr>
 <td>max_element()</td>
+<td></td>
+</tr>
+<tr>
+<td>minmax_element()</td>
+<td></td>
+</tr>
+<tr>
+<td>clamp()</td>
 <td></td>
 </tr>
 <tr>
@@ -477,8 +570,12 @@
 <td>prev_permutation()</td>
 <td></td>
 </tr>
+<tr>
+<td>is_permutation()</td>
+<td></td>
+</tr>
 </tbody></table>
-<h3 id="2-4-C库函数"><a href="#2-4-C库函数" class="headerlink" title="2.4 C库函数"></a>2.4 C库函数</h3><p>    其实&lt;algorithm&gt;头文件还包含了cstdlib(或stdlib.h),仅为与C语言兼容而存在,此处不再介绍.</p>
+<h3 id="2-5-C库函数"><a href="#2-5-C库函数" class="headerlink" title="2.5 C库函数"></a>2.5 C库函数</h3><p>    其实&lt;algorithm&gt;头文件还包含了cstdlib(或stdlib.h),仅为与C语言兼容而存在,此处不再介绍.</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/Minecraft1248">本文由陈致格撰写</a></p>
 
     </div>
